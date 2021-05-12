@@ -1,12 +1,4 @@
-import javax.lang.model.util.ElementScanner14;
 import javax.swing.*;
-import javax.swing.border.Border;
-
-import java.awt.color.*;
-import java.awt.event.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -14,15 +6,13 @@ import java.util.Scanner;
 import java.awt.*;
 
 
-
-public class Paint{
+public class KubiPaint{
     public static void main(String[] args) {
         myFrame f = new myFrame();
         f.setVisible(true);
         f.panel.repaint();
     }
 }
-
 
 class myButtonAdapter implements ActionListener{
     private myPanel P;
