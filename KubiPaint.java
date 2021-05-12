@@ -338,8 +338,6 @@ class myPanel extends JPanel{
             //Jesli włączony jest tryb poruszania figura 
             //podąza za kursorem do czasu puszczenia myszy
             if (movingFlag) {
-                /*double x=(double) event.getX();
-                double y=(double) event.getY();*/ //usunac
                 int x=event.getX();
                 int y=event.getY();
                 Point2D movePoint =(Point2D)new Point((int)(x -catchVect.getX()),(int) (y - catchVect.getY()));
@@ -462,7 +460,7 @@ class myPanel extends JPanel{
     }
 
     //Rozszezona klasa elipsy wykorzystywana do kół
-    class myCircle extends Ellipse2D.Double{     //kazde przesuniecie zrobic wektorowo (jest to schludne)
+    class myCircle extends Ellipse2D.Double{
         myCircle(){
             super();
         }
