@@ -14,7 +14,7 @@ public class KubiPaint{
     }
 }
 
-//Rozszeżona klasa JPanel o metody do obsługi rysowania
+//Rozszeżona klasa JPanel o metody i klasy do obsługi rysowania
 class myPanel extends JPanel{
     private ArrayList<Shape> figureList = new ArrayList<Shape>();        
     private ArrayList<Color> colorList = new ArrayList<Color>();
