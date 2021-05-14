@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.awt.*;
 
-
+//Klasa z main()
 public class KubiPaint{
     public static void main(String[] args) {
         myFrame f = new myFrame();
@@ -14,27 +14,7 @@ public class KubiPaint{
     }
 }
 
-class myButtonAdapter implements ActionListener{
-    private myPanel P;
-    String type;
-    myButtonAdapter(myPanel P, String type) {this.P=P; this.type=type;}
-    public void actionPerformed(ActionEvent e) {
-        P.menu.Flag = type;
-        P.activeShape = null;
-        P.repaint();
-    }
-}
-
-class myButton extends JButton{
-    myButton(myPanel P, Icon icon, String t)
-    {
-        super(icon);
-        
-        addActionListener(new myButtonAdapter(P, t));
-
-    }
-}
-
+//Rozszeżona klasa JPanel o metody do obsługi rysowania
 class myPanel extends JPanel{
     private ArrayList<Shape> figureList = new ArrayList<Shape>();        
     private ArrayList<Color> colorList = new ArrayList<Color>();
@@ -961,7 +941,7 @@ class myFrame extends JFrame implements ActionListener{
     }
 }
 
-//Klasa wykorzystana do budowy panelu menu figur
+//Klasa wykorzystana do budowy panelu z menu figur
 class menuPanel extends JPanel{
     public String Flag;
 
@@ -972,6 +952,30 @@ class menuPanel extends JPanel{
         this.add(Rectangle);
         this.add(Circle);
         this.add(Triangle);
+    }
+    
+    //Klasa implementująca słuchacz zdarzeń do
+    //przycisków panelu z menu figur
+    class myButtonAdapter implements ActionListener{
+        private myPanel P;
+        String type;
+        myButtonAdapter(myPanel P, String type) {this.P=P; this.type=type;}
+        public void actionPerformed(ActionEvent e) {
+            P.menu.Flag = type;
+            P.activeShape = null;
+            P.repaint();
+        }
+    }
+    
+    //Klasa przycisków panelu z menu figur
+    class myButton extends JButton{
+        myButton(myPanel P, Icon icon, String t)
+        {
+            super(icon);
+
+            addActionListener(new myButtonAdapter(P, t));
+
+        }
     }
 }
 
