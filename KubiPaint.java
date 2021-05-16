@@ -1,4 +1,10 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.color.*;
+import java.awt.event.*;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
