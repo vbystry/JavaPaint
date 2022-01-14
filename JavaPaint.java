@@ -10,7 +10,7 @@ import java.util.Scanner;
 import javax.swing.*;
 
 //Klasa z main()
-public class KubiPaint{
+public class JavaPaint{
     public static void main(String[] args) {
         myFrame f = new myFrame();
         f.setVisible(true);
