@@ -1,4 +1,4 @@
-# KubiPaint
+# JavaPaint
 Prosty edytor graficzny dla kubistów
 
 Funkcjonalność
